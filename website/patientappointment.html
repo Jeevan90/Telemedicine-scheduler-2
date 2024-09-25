@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Patient Appointments</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-image: url('Image/appointment.png');
+            background-size: cover;
+            background-position: center;
+        }
+        nav {
+            background: rgb(3, 111, 119);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 90px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .appointment {
+            background: #e9ecef;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .done {
+            background: #c3e6cb; /* Light green for done appointments */
+        }
+        .not-done {
+            background: #f5c6cb; /* Light red for not done appointments */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+    </style>
+    <script>
+        function displayAppointments() {
+            const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+            const appointmentList = document.getElementById('appointmentList');
+            appointmentList.innerHTML = '';
+
+            if (appointments.length === 0) {
+                appointmentList.innerHTML = '<p>No appointments found.</p>';
+            } else {
+                appointments.forEach(appointment => {
+                    const appointmentDiv = document.createElement('div');
+                    appointmentDiv.className = 'appointment' + (appointment.done ? ' done' : (appointment.notDone ? ' not-done' : ''));
+                    appointmentDiv.innerHTML = `
+                        <p><strong>Department:</strong> ${appointment.department}</p>
+                        <p><strong>Doctor:</strong> ${appointment.doctor}</p>
+                        <p><strong>Patient Name:</strong> ${appointment.name}</p>
+                        <p><strong>Phone:</strong> ${appointment.phone}</p>
+                        <p><strong>Email:</strong> ${appointment.email}</p>
+                        <p><strong>Date:</strong> ${appointment.date}</p>
+                        <p><strong>Time:</strong> ${appointment.time}</p>
+                        <p><strong>Note:</strong> ${appointment.note || 'N/A'}</p>
+                    `;
+                    appointmentList.appendChild(appointmentDiv);
+                });
+            }
+        }
+
+        window.onload = displayAppointments;
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="doctor.html">Doctors</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="myappointment.html">My Appointment</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Patient Appointments</h2>
+        <div id="appointmentList"></div>
+    </div>
+</body>
+</html>

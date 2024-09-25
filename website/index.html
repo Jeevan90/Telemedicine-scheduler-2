@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Health Care</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Service's</a></li>
+                <li><a href="doctor.html">Doctor's</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="appointment.html">Apointment</a></li>
+
+            </ul>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </nav>
+
+        <div class="main">
+            <img src="Image\main.png" alt="">
+            <div class="mainText">
+                <h1>Care With Best Centrall Care.</h1>
+                <p>Welcome to our Health Care center, where we prioritize your health and well-being. Our team of experienced doctors and healthcare professionals are dedicated to providing you with the highest quality of care.
+                We offer a wide range of medical services and specialize in various fields to meet your health needs. Your health is our mission, and we are here to support you every step of the way.</p>
+    
+                <a href="https://www.maxhealthcare.in/our-specialities/cardiology"><button>Read More</button></a>
+                
+            </div>
+        </div>
+
+
+        <div id="service">
+            <div class="head">
+                <h1>Our Services</h1>
+                <div class="serviceCard">
+                    <div class="card">
+                        <img src="Image\chest.webp" alt="">
+                        <p>Chest and Respiratory</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="Image\laboratory.webp" alt="">
+                        <p>Laboratory and Science</p>
+                    </div>
+                    <div class="card">
+                        <img src="Image\physio.webp" alt="">
+                        <p>Physiotherapy</p>
+                    </div>
+                    <div class="card">
+                        <img src="Image\nutrition.webp" alt="">
+                        <p>Nutrition Detection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        </div>
+
+        <div id="blog">
+            <div class="head">
+                <h1>Read Blogs</h1>
+            </div>
+            <div class="blogs">
+                <div class="blogCard">
+                    <img src="Image\bl1.jpg" alt="">
+                    <p>Health Care</p>
+                    <a href="https://www.maxhealthcare.in/blogs">Read More</a>
+                </div>
+                <div class="blogCard">
+                    <img src="Image\bl2.jpg" alt="">
+                    <p>Health Care</p>
+                    <a href="https://www.maxhealthcare.in/blogs">Read More</a>
+                </div>
+                <div class="blogCard">
+                    <img src="Image\bl3.webp" alt="">
+                    <p>Health Care</p>
+                    <a href="https://www.maxhealthcare.in/blogs">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="footer">
+            <div class="text">
+                <h2>About</h2>
+                <p>Welcome to our Health Care center <br> Health Care is a leading provider of medical services<br>
+
+            </div>
+            <div class="text">
+                <h2>Care</h2>
+                <p>Facility</p>
+                <p>Reviews</p>
+                <p>Support</p>
+                <p>Staff</p>
+
+            </div>
+            <div class="text">
+                <h2>Address</h2>
+                <p>JK Hills</p>
+                <p>Galaxy</p>
+                <p>234-999</p>
+                <p>maps</p>
+
+            </div>
+            <div class="text">
+                <h2>Connect Us</h2>
+                <p>YouTube</p>
+                <p>LinkedIN</p>
+                <p>Facebook</p>
+                <p>Instagram</p>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Health Care. All rights reserved.</p>
+        <p>Contact us: info@healthcare.com | Phone: (123) 456-7890</p>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = "-100px"; // Adjust based on navbar height
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+
+</html>

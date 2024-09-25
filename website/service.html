@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Health Care</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(Image/s3.jpg); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes full height */
+        }
+        nav {
+            background: rgb(3, 111, 119);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;   
+            position: fixed; /* Make it fixed */
+            width: 100%; /* Full width */
+            transition: top 0.3s; /* Smooth transition */
+            top: 0; /* Start at the top */
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+        .logo h1 {
+            margin: 0;
+            display: inline;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: inline;
+            margin-left: 20px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .services-section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(3, 111, 119, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 60px; /* Space for fixed nav */
+            flex: 1; /* Allow this section to grow and fill space */
+        }
+        .service {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        footer {
+            background-color: rgb(3, 111, 119);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">
+            <h1>Health Care</h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="doctor.html">Doctors</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+        </ul>
+    </nav>
+<br>
+<br>
+<div class="services-section">
+    <h2>Our Services</h2>
+
+    <div class="service">
+        <h3>Cardiology</h3>
+        <img src="Image/Cardiology.jpeg" alt="Cardiology" style="max-width: 50%; border-radius: 8px;">
+        <p>Comprehensive cardiac care including diagnostics, treatment, and preventive measures for heart diseases. Our cardiologists are experts in managing conditions such as hypertension, heart attacks, and heart failure, using state-of-the-art technology and personalized treatment plans.</p>
+    </div>
+
+    <div class="service">
+        <h3>Dermatology</h3>
+        <img src="Image/dermatology.png" alt="Dermatology" style="max-width: 50%; border-radius: 8px;">
+        <p>Expert treatment for skin conditions, including acne, eczema, and skin cancer screenings. Our dermatology team offers both medical and cosmetic services, ensuring that patients receive the best care for their skin health and appearance.</p>
+    </div>
+
+    <div class="service">
+        <h3>Neurology</h3>
+        <img src="Image/neurology.jpg" alt="Neurology" style="max-width: 50%; border-radius: 8px;">
+        <p>Diagnosis and treatment of neurological disorders including migraines, epilepsy, and multiple sclerosis. We provide comprehensive care that includes advanced imaging, individualized treatment plans, and ongoing management to improve quality of life for patients.</p>
+    </div>
+
+    <div class="service">
+        <h3>Orthopedics</h3>
+        <img src="Image/orthopedics.jpeg" alt="Orthopedics" style="max-width: 150%; border-radius: 8px;">
+        <p>Specialized care for bone, joint, and muscle disorders, including sports injuries and arthritis. Our orthopedic specialists are dedicated to restoring mobility and function through both surgical and non-surgical options tailored to each patient's needs.</p>
+    </div>
+
+    <div class="service">
+        <h3>Pediatrics</h3>
+        <img src="Image/pediatrics.webp" alt="Pediatrics" style="max-width: 50%; border-radius: 8px;">
+        <p>Comprehensive healthcare for infants, children, and adolescents, ensuring their growth and development. Our pediatricians focus on preventive care, vaccinations, and managing common childhood illnesses to keep your child healthy and thriving.</p>
+    </div>
+
+    <div class="service">
+        <h3>Oncology</h3>
+        <img src="Image/oncology.webp" alt="Oncology" style="max-width: 50%; border-radius: 8px;">
+        <p>Specialized treatment for cancer patients, including chemotherapy, radiation therapy, and immunotherapy. Our oncology team provides compassionate care, with a focus on individualized treatment plans that address the specific needs and preferences of each patient.</p>
+    </div>
+
+    <div class="service">
+        <h3>Gynecology</h3>
+        <img src="Image/gynecology.jpg" alt="Gynecology" style="max-width: 50%; border-radius: 8px;">
+        <p>Comprehensive women's health services, including routine examinations, family planning, and menopause management. Our gynecologists are committed to providing high-quality care in a comfortable and supportive environment.</p>
+    </div>
+
+    <div class="service">
+        <h3>Physiotherapy</h3>
+        <img src="Image/physiotherapy.webp" alt="Physiotherapy" style="max-width: 50%; border-radius: 8px;">
+        <p>Rehabilitation services to help patients recover from injuries, surgeries, and chronic pain conditions. Our physiotherapists develop personalized exercise programs and treatment plans to improve mobility, strength, and overall function.</p>
+    </div>
+</div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Health Care. All rights reserved.</p>
+        <p>Contact us: info@healthcare.com | Phone: (123) 456-7890</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = "-100px"; // Adjust based on navbar height
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+</body>
+</html>

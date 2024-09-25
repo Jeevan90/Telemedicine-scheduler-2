@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6; /* Light blue background color */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        nav {
+            background: rgb(3, 111, 119);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .registration-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            margin-top: 80px; /* To account for fixed navbar */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(3, 111, 119);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .submit-button:hover {
+            background-color: #025e62;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-link a {
+            color: rgb(3, 111, 119);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>Health Care</h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="doctor.html">Doctors</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="doctor-login.html">Doctor Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="registration-container">
+        <h2>Doctor Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="submit-button">Register</button>
+            <div class="error-message" id="error-message"></div>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="doctor-login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match. Please try again.';
+                return;
+            }
+
+            // Simulate registration success
+            alert('Registration successful! You can now log in.');
+            // Here you would typically save the credentials to a database or local storage
+
+            // Redirect to login page after successful registration
+            window.location.href = 'doctor-login.html';
+        });
+    </script>
+
+</body>
+</html>
